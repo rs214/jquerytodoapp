@@ -6,7 +6,7 @@ $("ul").on("click", "li", function() {
 
 //Click on X to delete todo
 
-$("span").on("click", function(e) {
+$("ul").on("click", "span", function(e) {
   $(this).parent().fadeOut(500, function() {
     $(this).remove();
   });
@@ -17,6 +17,6 @@ $("input[type='text']").keypress(function(e) {
    if (e.which === 13) {
     var toDoText = $(this).val();
     $(this).val("");
-    $("ul").append(`<li><span>X </span>${toDoText}</li>`);
+    $("ul").append(`<li><span><i class="fa fa-trash"></i> </span>${toDoText}</li>`);
    }
 });
