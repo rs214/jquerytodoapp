@@ -6,7 +6,7 @@ $("ul").on("click", "li", function() {
 
 //Click on X to delete todo
 
-$("span").on("click", "X", function(e) {
+$("span").on("click", function(e) {
   $(this).parent().fadeOut(500, function() {
     $(this).remove();
   });
